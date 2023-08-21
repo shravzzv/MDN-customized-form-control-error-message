@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Customized form control error</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <form novalidate>
@@ -17,16 +18,5 @@
       </p>
       <button type="submit">Submit</button>
     </form>
-    <script>
-      const email = document.getElementById('mail')
-
-      email.addEventListener('input', (event) => {
-        if (email.validity.typeMismatch) {
-          email.setCustomValidity('I am expecting an email address!')
-        } else {
-          email.setCustomValidity('')
-        }
-      })
-    </script>
   </body>
 </html>
